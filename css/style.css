@@ -1,0 +1,166 @@
+@font-face {
+    font-family: PP Editorial New;
+    src: url(../typography/PPEditorialNew-Ultralight.woff2) format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Roboto Mono;
+    src: url(../typography/RobotoMono-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes headerFadeInUp {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+html{
+    /* design system colors for the website */
+    --background-color: #FFFFFF;
+    --primary-color: #3A3A3A;
+    --secondary-color: #FC474D;
+}
+
+* {
+    box-sizing: border-box;
+   }
+
+body {
+    background-color: var(--background-color);
+}
+
+h1{
+    font-family: PP Editorial New, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 50px;
+    line-height: 41px;
+    color: var(--primary-color);
+    margin: 81px 0 36px 0;
+}
+
+h2{
+    font-family: PP Editorial New, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 28px;
+    line-height: 31px;
+    color: var(--secondary-color);
+    margin: 36px 0 10px 0;
+}
+
+h3{
+    font-family: PP Editorial New, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-block: 8px;
+}
+
+p{
+    font-family: Roboto Mono, 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--primary-color);
+}
+
+.help-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 44px 0 44px 0;
+    animation: headerFadeInUp 0.45s ease-in-out forwards;
+}
+
+.help-header a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: Roboto Mono, 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.help-header a:hover {
+    color: var(--secondary-color);
+}
+
+.h3-list {
+    list-style-position: outside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.help-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dashed var(--primary-color);
+    border-radius: 4px;
+    margin-bottom: 36px;
+    padding-inline: 55px;
+    background-color: #FFFFFF;
+    max-width: 696px;
+    filter: drop-shadow(-4px 4px 3.1px rgba(0, 0, 0, 0.10));
+}
+
+.hca {
+    animation: fadeInUp .45s ease-in-out forwards;
+}
+
+.hcb {
+    opacity: 0;
+    animation: fadeInUp 0.33s ease-in-out .5s forwards;
+}
+
+.help-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 587px;
+    height: auto;
+}
+
+.faq {
+    margin-block: 0;
+}
+
+.help-container p.faq:last-child {
+    margin-bottom: 60px;
+}
+
+.help-container h2,
+.help-container .faq {
+    text-align: left;
+    align-self: flex-start;
+}
+
+@media (min-width: 1200px) {
+    body {
+        margin-inline: 44px;
+    }
+
+    .help {
+        max-width: 696px;
+        margin-inline: auto;
+    }
+}
