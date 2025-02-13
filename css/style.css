@@ -51,7 +51,7 @@ body {
 
 h1{
     font-family: PP Editorial New, 'Times New Roman', Times, serif;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 50px;
     line-height: 41px;
     color: var(--primary-color);
@@ -111,15 +111,11 @@ p{
 }
 
 .help-container {
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px dashed var(--primary-color);
-    border-radius: 4px;
-    margin-bottom: 36px;
-    padding-inline: 55px;
-    background-color: #FFFFFF;
-    max-width: 696px;
     filter: drop-shadow(-4px 4px 3.1px rgba(0, 0, 0, 0.10));
 }
 
@@ -162,5 +158,79 @@ p{
     .help {
         max-width: 696px;
         margin-inline: auto;
+    }
+
+    .help-container {
+        border-radius: 4px;
+        margin-bottom: 36px;
+        padding-inline: 55px;
+        max-width: 696px;
+    }
+
+    .help-container.hcb h2:first-of-type {
+        margin-top: 25px;
+    }
+
+    .h3-list {
+        margin: 0 0 36px 0;
+    }
+}
+
+@media (min-width: 834px) and (max-width: 1200px) {
+    body {
+        margin-inline: 60px;
+    }
+
+    .help {
+        max-width: 696px;
+        margin-inline: auto;
+    }
+
+    .help-container {
+        border-radius: 4px;
+        margin-bottom: 36px;
+        padding-inline: 55px;
+        max-width: 696px;
+    }
+}
+
+@media (min-width: 330px) and (max-width: 834px) {
+    body {
+        margin-inline: 26px;
+    }
+
+    h1{
+        font-size: 36px;
+        margin: 36px 0 26px 0;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .help-container.hcb h2:first-of-type {
+        margin-top: 0;
+    }
+
+    .h3-list {
+        margin: 0 0 36px 0;
+    }
+
+    .help-container p.faq:last-child {
+        margin-bottom: 36px;
+    }
+
+    .help-container {
+        border-radius: 4px;
+        margin-bottom: 36px;
+        padding-inline: 26px;
     }
 }
