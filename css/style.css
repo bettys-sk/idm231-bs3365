@@ -43,10 +43,11 @@ html{
 
 * {
     box-sizing: border-box;
-   }
+}
 
 body {
     background-color: var(--background-color);
+    background-image: url(../image/Blu\ Stripes\ Texture.png);
 }
 
 h1{
@@ -102,6 +103,44 @@ p{
     color: var(--secondary-color);
 }
 
+.index-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin: 0 auto;
+}
+
+.left-section {
+    flex: 1 1 50%;
+    width: 100%;
+    height: auto;
+    animation: fadeInUp .45s ease-in-out forwards;
+}
+
+.left-section img {
+    width: 100%;
+    height: auto;
+}
+
+.right-section {
+    flex: 1 1 50%;
+    max-width: 50%;
+    animation: fadeInUp .45s ease-in-out forwards;
+}
+
+.zodiac-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.zodiac-grid img {
+    width: 100%;
+    height: auto;
+}
+
 .h3-list {
     list-style-position: outside;
     display: flex;
@@ -155,6 +194,17 @@ p{
         margin-inline: 44px;
     }
 
+    .left-section img {
+        margin-bottom: 36px;
+        width: 712.746px;
+        height: 892px;
+        aspect-ratio: 712.746 / 892;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
     .help {
         max-width: 696px;
         margin-inline: auto;
@@ -179,6 +229,24 @@ p{
 @media (min-width: 834px) and (max-width: 1200px) {
     body {
         margin-inline: 60px;
+    }
+    
+    .index-container {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .zodiac-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zodiac-grid img:last-child {
+        margin-bottom: 26px;
     }
 
     .help {
@@ -214,6 +282,24 @@ p{
 
     p {
         font-size: 14px;
+    }
+
+    .index-container {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .zodiac-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .zodiac-grid img:last-child {
+        margin-bottom: 26px;
     }
 
     .help-container.hcb h2:first-of-type {
