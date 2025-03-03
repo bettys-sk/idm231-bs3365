@@ -189,6 +189,42 @@ p{
     align-self: flex-start;
 }
 
+form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+label {
+    font-family: 'PP Editorial New';
+    font-style: normal;
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-top: 8px;
+}
+
+input {
+    font-family: 'PP Editorial New';
+    font-style: normal;
+    font-size: 16px;
+    margin: 0 0 30px 16px;
+    padding: 8px;
+    background-color: var(--background-color);
+    border: solid black .75px;
+    height: 40px;
+}
+
+.submit {
+    margin-bottom: 30px;
+    padding: 8px;
+    font-family: 'PP Editorial New';
+    font-style: normal;
+    font-size: 20px;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    border: solid black .75px;
+}
+
 @media (min-width: 1200px) {
     body {
         margin-inline: 44px;
