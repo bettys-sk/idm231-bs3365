@@ -112,8 +112,6 @@ function stop_all_sounds() {
 function create_image_button(defaultImg, sound_file, title_text) {
     const imgBtn = document.createElement('img');
     imgBtn.src = defaultImg;
-    imgBtn.alt = title_text;
-    imgBtn.title = title_text;
     imgBtn.style.cursor = 'pointer';
 
     const audio = new Audio(sound_file);
@@ -143,3 +141,18 @@ function initialize() {
 
 // calls for init to be ran
 initialize();
+
+const form = document.querySelector('form');
+const error_list = document.querySelector('.errors');
+
+// prevents the default of the reloading page after inputting date data
+function handle_submit(event) {
+    event.preventDefault();
+}
+
+if (form) {
+    form.addEventListener('submit', handle_submit);
+} 
+
+const submitBtn = document.querySelector('.submit');
+const datepicker = document.querySelector('datepicker');
