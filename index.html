@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortune Cookie Zodiac</title>
+    <title>Zodiac Fortune Cookie 🥠</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header class="help-header">
-        <a href="index.html">Home</a>
-        <a href="help.html">Help</a>
+        <a href="#" class="help-link">Help</a>
     </header>
 
     <div class="index-container">
@@ -22,25 +21,47 @@
         <div class="right-section">
 
             <form>
-                <label for="birthday">SELECT YOUR BIRTHDATE:</label>
-                <input type="date" id="datepicker" name="birthday">
-                <button class="submit">ENTER</button>
+                <label for="birthdate">SELECT YOUR BIRTHDATE:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <button class="submit" type="submit">Submit</button>
             </form>
+
             <ul class="errors" hidden></ul>
 
-            <div class="zodiac-grid">
-                <!-- <img src="image/c-aries-04.jpg" alt="">
-                <img src="image/c-taurus.jpg" alt="">
-                <img src="image/c-gemini.jpg" alt="">
-                <img src="image/c-cancer.jpg" alt="">
-                <img src="image/c-leo.jpg" alt="">
-                <img src="image/c-virgo.jpg" alt="">
-                <img src="image/c-libra.jpg" alt="">
-                <img src="image/c-scorpio.jpg" alt="">
-                <img src="image/c-sagittarius.jpg" alt="">
-                <img src="image/c-capricorn.jpg" alt="">
-                <img src="image/c-aquarius.jpg" alt="">
-                <img src="image/c-pisces.jpg" alt=""> -->
+            <div class="zodiac-grid"></div>
+
+        </div>
+    </div>
+
+    <!-- added popup-info class for styling -->
+    <div class="help popup-info">
+        <div class="popup-content">
+            <!-- popup Header with close button -->
+            <div class="popup-header">
+                <button class="close-btn-info" type="button" aria-label="Close help popup">&#x2715;</button>
+            </div>
+    
+            <!-- how it works Section (using hca) -->
+            <div class="help-container hca">
+                <div class="help-content">
+                    <h1>How does this work?</h1>
+                    <ol class="h3-list">
+                        <li><h3>Select your birthday using the date picker.</h3></li>
+                        <li><h3>We'll find your zodiac sign for you.</h3></li>
+                        <li><h3>You'll receive a fortune cookie message based on your sign!</h3></li>
+                    </ol>
+                </div>
+            </div>
+    
+            <!-- FAQ section (using hcb) -->
+            <div class="help-container hcb">
+                <div class="help-content">
+                    <h1>FAQ</h1>
+                    <h2>What if I don't know my zodiac sign?</h2>
+                    <p class="faq">No worries! Just pick your birthday, and we'll tell you your sign automatically.</p>
+                    <h2>Can I get a different fortune?</h2>
+                    <p class="faq">Right now, you'll receive one special fortune for your zodiac sign. But who knows? Maybe new fortunes will be added soon!</p>
+                </div>
             </div>
         </div>
     </div>
