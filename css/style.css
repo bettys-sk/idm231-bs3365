@@ -39,6 +39,8 @@ html{
     --background-color: #FFFFFF;
     --primary-color: #3A3A3A;
     --secondary-color: #FC474D;
+
+    cursor: url('../image/cursor.png'),auto;
 }
 
 * {
@@ -84,6 +86,14 @@ p{
     color: var(--primary-color);
 }
 
+a {
+    cursor: url('../image/cursor.png'),auto;
+}
+
+a, img {
+    cursor: url('../image/cursor.png'), auto !important;
+}
+
 .popup-content {
     display: flex;
     flex-direction: column;
@@ -102,6 +112,7 @@ p{
     font-size: 1.5rem;
     cursor: pointer;
     padding: 10px 16px;
+    cursor: url('../image/cursor.png'), auto !important;
 }
 
 .help.popup-info {
@@ -167,7 +178,7 @@ body.blurred::before {
     color: var(--primary-color);
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: url('../image/cursor.png'), auto !important;
 }
 
 .help-header {
