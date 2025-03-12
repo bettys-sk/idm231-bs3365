@@ -207,6 +207,11 @@ body.blurred::before {
 .left-section img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.left-section img:hover {
+    transform: scale(1.0) rotate(.8deg)
 }
 
 .right-section {
@@ -225,6 +230,11 @@ body.blurred::before {
 .zodiac-grid img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.zodiac-grid img:hover {
+    transform: scale(1.05) rotate(-1deg)
 }
 
 .h3-list {
